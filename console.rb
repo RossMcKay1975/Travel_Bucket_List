@@ -4,8 +4,9 @@ require_relative('models/city')
 
 require('pry')
 
-
-
+Adventure.delete_all()
+City.delete_all()
+Country.delete_all()
 
 country1 = Country.new({'country' => 'Croatia'})
 country1.save
@@ -19,6 +20,6 @@ adventure1.save
 
 #
 #
-#
-# binding.pry
-# nil
+
+binding.pry
+nil

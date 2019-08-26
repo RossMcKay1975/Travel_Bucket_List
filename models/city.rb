@@ -18,4 +18,26 @@ class City
    @id = city['id'].to_i
  end
 
+ def delete()
+   sql = "DELETE * FROM cities where id = $1"
+   values =[@id]
+   SqlRunner.run(sql, values)
+ end
+
+ def self.all()
+   sql = "SELECT * FROM cities"
+   country_data = SqlRunner.run(sql)
+   return Country.map_items(country_data)
+ end
+
+ def self.delete_all()
+   sql = "DELETE FROM cities"
+   SqlRunner.run(sql)
+ end
+
+ def self.map_items(data)
+   result = data.map{|city| City.new(country)}
+   return result
+ end
+
 end

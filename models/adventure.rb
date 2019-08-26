@@ -21,4 +21,22 @@ attr_accessor :country_id, :city_id, :rating, :done
     @id = adventure['id'].to_i
   end
 
+
+  def delete()
+    sql = "Delete * FROM adventures WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
+  def self.all()
+    sql = "SELECT * FROM adventures"
+    data = SqlRunner.run (sql)
+    return data.map{|adventure| Adventures.new(adventure)}
+  end
+
+  def self.delete_all()
+    sql = "DELETE FROM adventures"
+    SqlRunner.run(sql)
+  end
+
 end
