@@ -10,5 +10,11 @@ attr_accessor :country
     @country = options['country']
   end
 
+  def save()
+    sql = "INSERT INTO countries (country) VALUES ($1) RETURNING id"
+    values = [@country]
+    country = SqlRunner.run(sql, values)
+    @id = country.first()['id'].to_i
+  end
 
 end
