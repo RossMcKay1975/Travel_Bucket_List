@@ -1,4 +1,4 @@
-require_relative('models/adventures')
+require_relative('models/adventure')
 require_relative('models/country')
 require_relative('models/city')
 
@@ -12,8 +12,11 @@ country1.save
 
 city1 = City.new({'city' => 'Dubrovnik', 'country_id' => country1.id})
 city1.save
-#
-#
+
+
+adventure1 = Adventure.new({'city_id' => city1.id, 'visited' => 't', 'rating' => 5})
+adventure1.save
+
 #
 #
 #

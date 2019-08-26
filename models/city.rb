@@ -14,7 +14,7 @@ class City
  def save()
    sql = "INSERT INTO cities (city, country_id) VALUES ($1, $2) RETURNING id"
    values = [@city, @country_id]
-   cities = SqlRunner.run(sql, values)[0];
+   city = SqlRunner.run(sql, values)[0];
    @id = city['id'].to_i
  end
 
