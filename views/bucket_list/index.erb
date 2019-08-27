@@ -1,0 +1,15 @@
+<h2>Bucket List</h2>
+
+<div id="bucket_list-wrapper"
+
+  <% @bucket_list_items.each do |bucket_list| %>
+
+    <% current_city = bucket_list.city %>
+
+    <div class="bucket_list">
+
+    <p> <%= current_city.name %> <%= current_city.country.name %> <%= bucket_list.rating %> </p>
+    </div>
+
+<% end %>
+</div>
