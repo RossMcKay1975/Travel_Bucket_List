@@ -1,27 +1,27 @@
 require('sinatra')
 require('sinatra/contrib/all')
-require_relative('models/bucket_list')
-require_relative('models/city')
-require_relative('models/country')
+require_relative('../models/bucket_list')
+require_relative('../models/city')
+require_relative('../models/country')
 require('pry')
 also_reload('./models/*')
 
 get '/bucket_list' do
   @bucket_list_items = Bucket_list.all
   # binding.pry
-  erb(:'bucket_list/index')
+  erb( :'bucket_list/index')
 end
 
+get '/bucket_list/new' do
+  bucket_list = Bucket_list.all
+  erb( :'bucket_list/new' )
+end
 
-# get '/city/new' do
-#   @country = City.all
-#   erb(:new)
-# end
-#
-# post '/city' do
-#   City.new(params).save
-#   redirect to '/city'
-# end
+post '/bucket_list' do
+  binding.pry
+  Bucket_list.new(params).save
+  redirect to '/bucket_list'
+end
 #
 # get '/city/:id' do
 #   @city = City.find(params['id'])
