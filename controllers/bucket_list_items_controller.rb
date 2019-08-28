@@ -22,25 +22,26 @@ post '/bucket_list' do
   redirect to '/bucket_list'
 end
 #
-# get '/city/:id' do
-#   @city = City.find(params['id'])
-#   erb(:show)
-# end
-#
-# get '/city/:id/edit' do
-#   @country = City.all
-#   @city = City.find(params['id'])
-#   erb(:edit)
-# end
-#
-# post '/city/:id' do
-#   city = City.new(params)
-#   city.update
-#   redirect to "/cities/#{params['id']}"
-# end
-#
-# post '/cities/:id/delete' do
-#   student = City.find(params['id'])
-#   student.delete
-#   redirect to '/Cities'
-# end
+get '/bucket_list/:id' do
+  @city = City.find(params['id'])
+  erb(:show)
+end
+
+get '/bucket_list/:id/edit' do
+  @country = City.all
+  @city = City.find(params['id'])
+  erb(:edit)
+end
+
+post '/bucket_list/:id' do
+  city = City.new(params)
+  city.update
+  redirect to "/cities/#{params['id']}"
+end
+
+post '/bucket_list/:id/delete' do
+  p params
+  bucket_list = Bucket_list.find(params['id'])
+  bucket_list.delete
+  redirect to '/bucket_list'
+end

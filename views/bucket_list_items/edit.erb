@@ -1,0 +1,28 @@
+<h2>Edit <%= @student.format_name %></h2>
+<form method="POST" action="/bucket_list<%= @city.id %>">
+  <div class="form-wrapper">
+
+    <div class="form-el">
+      <label for="city">City:</label>
+      <input type="text" name="city" id="city" value="<%= @city.city %>"/>
+    </div>
+
+    <div class="form-el">
+      <label for="country">Select House:</label>
+      <select name="house_id" id="city_select" selected="<%= @city.country_id  %>">
+        <% @cities.each do |city| %>
+          <% if city.id == @city.city_id %>
+            <option value=<%= city.id %> selected><%= city.name.capitalize %></option>
+          <% else %>
+            <option value=<%= city.id %>><%= city.name.capitalize %></option>
+          <% end %>
+        <% end %>
+      </select>
+    </div>
+
+    <div class="form-el">
+      <input type="submit" value="Submit Edit"/>
+    </div>
+
+  </div>
+</form>

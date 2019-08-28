@@ -9,10 +9,10 @@
     <div class="bucket_list">
 
       <p> <%= current_city.name %> <%= current_city.country.name %> <%= bucket_list.rating %> </p>
+
+      <form action="/bucket_list/<%= bucket_list.id %>/delete" method="POST"><input type="submit" value="Remove From Bucket List"></form>
     </div>
 
-  <div class="form-el">
-  <input type="submit" value=""/>
   </div>
 
 

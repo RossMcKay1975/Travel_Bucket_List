@@ -26,10 +26,10 @@ attr_accessor :rating, :done
 
 
   def self.find(id)
-    sql = "SELECT * FROM cities where id = $1"
+    sql = "SELECT * FROM bucket_list WHERE id = $1"
     values = [id]
     results = SqlRunner.run(sql, values)
-    return City.new(results.first)
+    return Bucket_list.new(results.first)
   end
 
 
@@ -43,7 +43,7 @@ attr_accessor :rating, :done
   end
 
   def delete()
-    sql = "Delete * FROM bucket_list WHERE id = $1"
+    sql = "Delete FROM bucket_list WHERE id = $1"
     values = [@id]
     SqlRunner.run(sql, values)
   end

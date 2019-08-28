@@ -1,0 +1,6 @@
+<h2><%= @bucket_list.city.name %></h2>
+
+<p>City: <%= @bucket_list.city.name.capitalize %></p>
+
+<a href="/bucket_list/<%= @bucket_list.id %>/"edit">Edit</a>
+<form action="/bucket_list/<%= @bucket_list.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
