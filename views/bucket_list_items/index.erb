@@ -2,14 +2,19 @@
 
 <div id="bucket_list-wrapper"
 
-  <% @bucket_list_items.each do |bucket_list| %>
+    <% @bucket_list_items.each do |bucket_list| %>
 
     <% current_city = bucket_list.city %>
 
     <div class="bucket_list">
 
-    <p> <%= current_city.name %> <%= current_city.country.name %> <%= bucket_list.rating %> </p>
+      <p> <%= current_city.name %> <%= current_city.country.name %> <%= bucket_list.rating %> </p>
     </div>
+
+  <div class="form-el">
+  <input type="submit" value=""/>
+  </div>
+
 
 <% end %>
 </div>

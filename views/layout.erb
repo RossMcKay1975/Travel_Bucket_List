@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Travel Bucket List</title>
-  <link rel="stylesheet" href="/style.css">
+  <title>Travel Bucket List </title>
 </head>
 <body>
-  <%= yield %>
+  <nav> menu
+    <li class="menu-item"><a href='/country/new'>Add New Country</a></li>
+    <li class="menu-item"><a href='/city/new'>Add New City</a></li>
+    <li class="menu-item"><a href='/bucket_list/new'>Add to Bucket List</a></li>
+  </nav>
 
+  <h1 id="logo">Welcome to Your Travel Bucket List</h1>
+
+  <nav> <li class="bucket-list"><a href='/bucket_list'>View Bucket List</a></li>
+    <%= yield %>
 </body>
 </html>

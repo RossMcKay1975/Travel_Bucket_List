@@ -41,7 +41,7 @@ class City
 
  def self.all()
    sql = "SELECT * FROM cities"
-   country_data = SqlRunner.run(sql)
+   city_data = SqlRunner.run(sql)
    return City.map_items(city_data)
  end
 
@@ -51,7 +51,7 @@ class City
  end
 
  def self.map_items(data)
-   result = data.map{|city_name| City.new(city)}
+   result = data.map{|city_name| City.new(city_name)}
    return result
  end
 

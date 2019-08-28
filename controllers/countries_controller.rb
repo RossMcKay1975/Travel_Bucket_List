@@ -13,11 +13,11 @@ get '/country' do
 end
 
 get '/country/new' do
-  country = country.all
+  country = Country.all
   erb(:'countries/new')
 end
 #
-# post '/country' do
-#   Country.new(params).save
-#   redirect to /'bucket_list'
-# end
+post '/country' do
+  Country.new(params).save
+  redirect to '/bucket_list'
+end

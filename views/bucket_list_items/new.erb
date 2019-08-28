@@ -4,19 +4,12 @@
   <div class="form-wrapper">
 
     <div class="form-el">
-      <label for="country_select">Country Select:</label>
-      <select name="country_id" id="country_select">
-        <% @countries.each do |country| %>
-          <option value=<%= country.id %>><%= country.name.capitalize %> </option>
-          <% end %>
+      <label for="city_select">City Select:</label>
+      <select name="city_id" id="city_select">
+        <% @cities.each do |city| %>
+          <option value=<%= city.id %>><%= city.name.capitalize %> </option>
+        <% end %>
       </select>
-    </div>
-
-
-
-    <div class="form-el">
-      <label for="city">City:</label>
-      <input type="text" name="city" id="city"/>
     </div>
 
     <div class="form-el">
