@@ -1,10 +1,10 @@
-<h1>Create a New City to be added to your Bucket List</h1>
+<h2>Create a New City to be added to your Bucket List (1st select the country)</h2>
 
 <form method="POST" action="/city">
   <div class="form-wrapper">
 
 <div class="form-el">
-  <label for="country_select"><h1>Country Select:</h1></label>
+  <label for="country_select"></label>
   <select name="country_id" id="country_select">
     <% @countries.each do |country| %>
       <option value=<%= country.id %>><%= country.name.capitalize %> </option>
@@ -13,7 +13,7 @@
 </div>
 
   <div class="form-el">
-    <label for="city">City:</label>
+    <label for="city"><h2>City:</h2></label>
     <input type="text" name="name" id="city"/>
   </div>
 

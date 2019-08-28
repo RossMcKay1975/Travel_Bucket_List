@@ -1,10 +1,10 @@
-<h2>New destinations</h2>
+<h2>New destinations : </h2>
 
 <form method="POST" action="/bucket_list">
   <div class="form-wrapper">
 
     <div class="form-el">
-      <label for="city_select">City Select:</label>
+      <label for="city_select"><h2>Select the new city you would like to add to your bucket list:</h2></label>
       <select name="city_id" id="city_select">
         <% @cities.each do |city| %>
           <option value=<%= city.id %>><%= city.name.capitalize %> </option>
@@ -13,7 +13,7 @@
     </div>
 
     <div class="form-el">
-      <label for="Rating 1-5">Rating:</label>
+      <label for="Rating 1-5"><h2>Rating:</h2></label>
       <input type="text" name="rating" id="rating"/>
     </div>
 

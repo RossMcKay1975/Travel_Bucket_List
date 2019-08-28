@@ -3,12 +3,12 @@
   <div class="form-wrapper">
 
     <div class="form-el">
-      <label for="city">City:</label>
+      <label for="city"><h1>City:</h1></label>
       <input type="text" name="city" id="city" value="<%= @city.city %>"/>
     </div>
 
     <div class="form-el">
-      <label for="country">Select House:</label>
+      <label for="country"><h2>Select Country:</h2></label>
       <select name="house_id" id="city_select" selected="<%= @city.country_id  %>">
         <% @cities.each do |city| %>
           <% if city.id == @city.city_id %>
