@@ -32,10 +32,6 @@ a, a:link, a:visited {
   text-decoration: none;
 }
 
-a:hover, a:active, a:focus {
-  color: #8B0000;
-}
-
 nav {
   padding: 10px;
   margin: 50px;
@@ -50,23 +46,10 @@ nav li {
   text-transform: uppercase;
 }
 
-ul {
-  padding: 0px;
-  margin: 0px;
-  list-style-type: none;
-}
-
 main {
   padding: 25px;
 }
 
-.flex {
-  display: flex;
-}
-
-.flex--row {
-  flex-direction: row;
-}
 
 #content {
   border-left: 1px solid black;
