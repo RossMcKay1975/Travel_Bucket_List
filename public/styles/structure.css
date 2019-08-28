@@ -1,0 +1,73 @@
+body {
+  background: lightblue url('/images/map.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: papayawhip;
+  font-family: 'Merriweather', serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Special Elite', cursive;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  font-size: 1.8em;
+  color: black;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1em;
+  color: black;
+  margin-bottom: 20px
+}
+
+a, a:link, a:visited {
+  color: #8B0000;
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  color: #8B0000;
+}
+
+nav {
+  padding: 10px;
+  margin: 50px;
+  padding-top: 25px;
+}
+
+nav li {
+  margin-bottom: 15px;
+  font-size: 1em;
+  text-align: left;
+  color: black;
+  text-transform: uppercase;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+main {
+  padding: 25px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--row {
+  flex-direction: row;
+}
+
+#content {
+  border-left: 1px solid black;
+  padding-left: 25px;
+}
