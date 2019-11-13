@@ -2,12 +2,31 @@ body {
   background: lightgrey url('/images/map2.png');
   background-size: 100%;
   background-repeat: no-repeat;
-  color: papayawhip;
+  /* color: papayawhip; */
   font-family: 'Merriweather', serif;
   padding: 0px;
   margin: 0px;
 }
 
+.header {
+  padding: 15px;
+  color: black; 
+  text-align: center;
+  font-family: 'Special Elite', cursive;
+  font-size: 2.5em
+}
+.bucket_list {
+  padding-left: 15px;
+  padding-top: 10px;
+  text-align: left;
+  font-size: 10px;
+}
+.navside { 
+  float: left; 
+  text-align: left;
+  padding-left: 10px;
+  overflow: hidden;
+}
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Special Elite', cursive;
   margin: 0px;
@@ -16,15 +35,13 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.5em;
-  text-align: center;
   color: black;
-  margin-bottom: 20px;
 }
 
 h2 {
-  font-size: 1em;
+  font-size: 2.5em;
   color: black;
-  margin-bottom: 20px
+  text-align: left;
 }
 
 a, a:link, a:visited {
@@ -32,11 +49,11 @@ a, a:link, a:visited {
   text-decoration: none;
 }
 
-nav {
+/* nav {
   padding: 10px;
   margin: 50px;
   padding-top: 25px;
-}
+} */
 
 nav li {
   margin-bottom: 15px;
@@ -45,12 +62,9 @@ nav li {
   color: black;
   text-transform: uppercase;
 }
-
 main {
   padding: 25px;
 }
-
-
 #content {
   border-left: 1px solid black;
   padding-left: 25px;

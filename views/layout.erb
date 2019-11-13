@@ -12,20 +12,29 @@
   <link rel="stylesheet" type="text/css" href="/styles/tables.css">
 </head>
 <body>
-  <nav> <h2>menu :</h2>
-    <h2>
-    <li class="menu-item"><a href='/country/new'>Create New Country to Add to Bucket List </a></li>
-    <li class="menu-item"><a href='/city/new'>Create New City to Add to Bucket List</a></li>
-    <li class="menu-item"><a href='/bucket_list/new'>Add to Bucket List</a></li>
-    </h2>
-  </nav>
+  <div class="header"
+    <h1 id="logo">Welcome to Your Travel Bucket List</h1>
+  </div> 
 
-  <h1 id="logo">Welcome to Your Travel Bucket List</h1>
-
-  <nav> <h2> Options :</h2>
-    <li class="bucket-list"><a href='/bucket_list'>View Bucket List</a></li>
-        <li class="cities"><a href='/city'>View Cities On Bucket List</a></li>
-  </nav>
+  <div class="navside">
+      <h2>menu :</h2>
+      <li class="menu_item">
+        <a href='/bucket_list'>View Bucket List</a>
+      </li>
+      <li class="menu-item">
+        <a href='/city'>View Cities On Bucket List</a>
+      </li>
+      <li class="menu-item">
+        <a href='/country/new'>Create New Country to Add to Bucket List </a>
+      </li>
+      <li class="menu-item">
+        <a href='/city/new'>Create New City to Add to Bucket List</a>
+      </li>
+      <li class="menu-item">
+        <a href='/bucket_list/new'>Add to Bucket List</a>
+      </li>
+      
+  </div>
     <%= yield %>
 </body>
 </html>

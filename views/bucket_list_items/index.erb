@@ -1,20 +1,11 @@
-<h1>Bucket List</h1>
-
-<div id="bucket_list-wrapper"
-
+<div id="bucket_list"
     <% @bucket_list_items.each do |bucket_list| %>
-
     <% current_city = bucket_list.city %>
-
-    <div class="bucket_list">
-
-      <h1><p>< <%= current_city.name %> <%= current_city.country.name %> <%= bucket_list.rating %></p></h1>
-
+    <h1>Bucket List</h1>
+      <li><%= current_city.name %> <%= current_city.country.name %> <%= bucket_list.rating %></li>
       <form action="/bucket_list/<%= bucket_list.id %>/delete" method="POST">
-        <input type="submit" value="Remove From Bucket List"><input class="btn btn--danger" type="submit" value="delete" /></form>
-    </div>
-
-  </div>
+      <input type="submit" value="Remove From Bucket List"><input class="btn" type="submit" value="delete" /></form>
+</div>
 
 
 <% end %>
